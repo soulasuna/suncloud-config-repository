@@ -1,1 +1,24 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/suncloud_test?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    #配置tomcat连接池
+    tomcat:
+      #连接池初始化,最小,最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 50
+      #获取连接超时时间
+      max-wait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      #配置单个连接最小存活时间,单位毫秒
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
 environment: client-dev
