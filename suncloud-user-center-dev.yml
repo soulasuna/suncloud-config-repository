@@ -23,9 +23,9 @@ spring:
       test-on-return: false
 #springboot整合mybatis配置
 mybatis:
-  #map加载路径
+  #mapper文件加载路径
   mapperLocations: classpath*:**/Mapper/*.xml
-  #javabean所在的包
+  #javabean所在的基础包(可以是父级包名)
   typeAliasesPackage: com.dnt.suncloud.common.pojo.domain.
   #mybatis的配置
   configuration:
