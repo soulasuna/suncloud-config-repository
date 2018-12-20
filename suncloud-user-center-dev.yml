@@ -21,6 +21,12 @@ spring:
       test-while-idle: true
       test-on-borrow: true
       test-on-return: false
+  #消息队列
+  rabbitmq:
+    host: 39.106.183.142
+    port: 5671
+    username: koma
+    password: koma1993rabbitmq    
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
