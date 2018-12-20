@@ -21,4 +21,16 @@ spring:
       test-while-idle: true
       test-on-borrow: true
       test-on-return: false
+#springboot整合mybatis配置
+mybatis:
+  #map加载路径
+  mapperLocations: classpath*:**/Mapper/*.xml
+  #javabean所在的包
+  typeAliasesPackage: com.dnt.suncloud.common.pojo.domain.
+  #mybatis的配置
+  configuration:
+     #数据库中null值也调用setter方法
+     callSettersOnNulls: true
+     #驼峰命名与下划线相互转换
+     map-underscore-to-camel-case: true
 environment: dev-003
