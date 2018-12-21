@@ -26,7 +26,11 @@ spring:
     host: 39.106.183.142
     port: 5671
     username: koma
-    password: koma1993rabbitmq    
+    password: koma1993rabbitmq
+#开启hystrix断路器
+feign:
+  hystrix:
+    enabled: true
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
