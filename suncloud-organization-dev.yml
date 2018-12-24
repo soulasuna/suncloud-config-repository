@@ -61,6 +61,12 @@ mybatis:
      callSettersOnNulls: true
      #驼峰命名与下划线相互转换
      map-underscore-to-camel-case: true
+     
+#配置feignclient打印日志级别(fegin默认不开启日志打印)
+#feignclient必须给每个feign客户端配置日志打印级别
+logging:
+  level:
+    com.dnt.suncloud.common.feign.usercenter.UserFeignClient: debug
 
 #环境参数
 environment: organization-dev
