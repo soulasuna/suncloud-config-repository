@@ -27,10 +27,28 @@ spring:
     port: 5671
     username: koma
     password: koma1993rabbitmq
-#开启hystrix断路器
+
+#fegin客户端默认配置
 feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+  #fegin客户端请求开启okhttp(默认是jdk的链接效率低)
+  okhttp:
+    enabled: true
+  #feign开启断容器hystrix
   hystrix:
     enabled: true
+  #开启fegin客户端大文件使用
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+      
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
@@ -43,4 +61,6 @@ mybatis:
      callSettersOnNulls: true
      #驼峰命名与下划线相互转换
      map-underscore-to-camel-case: true
+
+#环境参数
 environment: organization-dev
