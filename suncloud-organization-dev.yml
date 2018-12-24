@@ -35,7 +35,7 @@ feign:
       default:
         connectTimeout: 5000
         readTimeout: 5000
-#        loggerLevel: full        
+        loggerLevel: full        
   #fegin客户端请求开启okhttp(默认是jdk的链接效率低)
   okhttp:
     enabled: true
