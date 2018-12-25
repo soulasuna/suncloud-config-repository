@@ -39,5 +39,5 @@ mybatis:
      callSettersOnNulls: true
      #驼峰命名与下划线相互转换
      map-underscore-to-camel-case: true
-environment: user-center-dev-006
+environment: user-center-dev-007
 
