@@ -69,4 +69,4 @@ logging:
     com.dnt.suncloud.common.feign.usercenter.UserFeignClient: debug
 
 #环境参数
-environment: organization-dev
+environment: organization-dev-001
