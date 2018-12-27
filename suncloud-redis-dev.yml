@@ -3,3 +3,9 @@ spring:
     host: 39.106.183.142
     port: 6380
     password: koma1993redis
+  #消息队列
+  rabbitmq:
+    host: 39.106.183.142
+    port: 5671
+    username: koma
+    password: koma1993rabbitmq
