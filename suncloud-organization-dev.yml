@@ -42,12 +42,14 @@ feign:
   #feign开启断容器hystrix
   hystrix:
     enabled: true
-  #开启fegin客户端大文件使用
+  #开启fegin客户端大文件使用GZIP压缩
   compression:
     request:
       enabled: true
       mime-types: text/xml,application/xml,application/json
       min-request-size: 2048
+    response:
+      enabled: true
       
 #springboot整合mybatis配置
 mybatis:
