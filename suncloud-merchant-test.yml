@@ -1,9 +1,9 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://192.168.110.110:3306/cloud_user_center?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/suncloud_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: root_mysql
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     #配置tomcat连接池
     tomcat:
@@ -21,6 +21,12 @@ spring:
       test-while-idle: true
       test-on-borrow: true
       test-on-return: false
+  #消息队列
+  rabbitmq:
+    host: 192.168.110.110
+    port: 5672
+    username: soulasuna
+    password: root_rabbitmq 
 
 #springboot整合mybatis配置
 mybatis:
