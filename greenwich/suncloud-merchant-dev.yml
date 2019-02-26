@@ -31,10 +31,10 @@ spring:
           slow-sql-millis: 5000
   #rabbitMQ配置
   rabbitmq:
-    host: 192.168.110.110
-    port: 5672
-    username: soulasuna
-    password: root_rabbitmq
+    host: 39.106.183.142
+    port: 5671
+    username: koma
+    password: koma1993rabbitmq
 
 #springboot整合mybatis配置
 mybatis:
