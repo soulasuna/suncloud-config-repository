@@ -23,10 +23,10 @@ spring:
       test-on-return: false
   #消息队列
   rabbitmq:
-    host: 39.106.183.142
+    host: 192.168.110.110
     port: 5671
-    username: koma
-    password: koma1993rabbitmq    
+    username: soulasuna
+    password: root_rabbitmq    
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
