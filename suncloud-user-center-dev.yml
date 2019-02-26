@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://localhost:3306/suncloud_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
     username: root
     password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     #配置tomcat连接池
     tomcat:
       #连接池初始化,最小,最大
