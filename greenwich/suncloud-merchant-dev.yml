@@ -29,6 +29,13 @@ spring:
         stat:
           merge-sql: true
           slow-sql-millis: 5000
+  #rabbitMQ配置
+  rabbitmq:
+    host: 192.168.110.110
+    port: 5672
+    username: soulasuna
+    password: root_rabbitmq
+
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
