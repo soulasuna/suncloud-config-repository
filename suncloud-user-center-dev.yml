@@ -24,7 +24,7 @@ spring:
   #消息队列
   rabbitmq:
     host: 192.168.110.110
-    port: 5671
+    port: 5672
     username: soulasuna
     password: root_rabbitmq    
 #springboot整合mybatis配置
