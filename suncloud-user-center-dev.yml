@@ -45,7 +45,7 @@ mybatis:
      #驼峰命名与下划线相互转换
      map-underscore-to-camel-case: true
 
-myProps: 
+my-props: 
   appName: user-center-dev-002
   appStauts: up
 
