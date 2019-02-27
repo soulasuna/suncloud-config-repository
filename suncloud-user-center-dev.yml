@@ -1,26 +1,31 @@
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://192.168.110.110:3306/cloud_user_center?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
-    username: root
-    password: root_mysql
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    # #配置tomcat连接池
-    # tomcat:
-    #   #连接池初始化,最小,最大
-    #   initial-size: 5
-    #   min-idle: 5
-    #   max-active: 50
-    #   #获取连接超时时间
-    #   max-wait: 60000
-    #   #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-    #   time-between-eviction-runs-millis: 60000
-    #   #配置单个连接最小存活时间,单位毫秒
-    #   min-evictable-idle-time-millis: 300000
-    #   validation-query: SELECT 1 FROM DUAL
-    #   test-while-idle: true
-    #   test-on-borrow: true
-    #   test-on-return: false
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.110.110:3306/cloud_user_center?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: root_mysql
+      #连接池初始化,最小,最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 200
+      #获取连接超时时间
+      max-wait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      #配置单个连接最小存活时间,单位毫秒
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      #druid连接池开启慢sql监控
+      filters: stat,wall,slf4j,config
+      filter:
+        stat:
+          merge-sql: true
+          slow-sql-millis: 5000
   #消息队列
   rabbitmq:
     host: 192.168.110.110
