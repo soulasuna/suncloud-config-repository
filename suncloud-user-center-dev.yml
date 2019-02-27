@@ -46,6 +46,6 @@ mybatis:
      map-underscore-to-camel-case: true
 
 my-props: 
-  appName: user-center-dev-002
+  appName: user-center-dev-001
   appStauts: up
 
