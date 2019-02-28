@@ -22,10 +22,15 @@ spring:
       test-on-return: false
       #druid连接池开启慢sql监控
       filters: stat,wall,slf4j,config
-      filter:
-        stat:
-          merge-sql: true
-          slow-sql-millis: 5000
+      connect-properties:
+        druid:
+          stat:
+            mergeSql: true
+            slowSqlMillis: 5000
+      # filter:
+      #   stat:
+      #     merge-sql: true
+      #     slow-sql-millis: 5000
   #消息队列
   rabbitmq:
     host: 192.168.110.110
