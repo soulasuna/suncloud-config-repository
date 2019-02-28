@@ -60,7 +60,7 @@ custom:
         servletLoginUserName: admin
         servletLoginPassWord: admin_druid
         servletResetEnable: false
-        filterPathExclusions: *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*
+        filterPathExclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
 
         # servlet-ip-white-allow: 127.0.0.1
         # servlet-ip-black-deny: 192.168.110.111
