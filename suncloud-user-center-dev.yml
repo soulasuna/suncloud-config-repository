@@ -40,17 +40,24 @@ spring:
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
-  mapperLocations: classpath*:**/Mapper/*.xml
+  mapper-locations: classpath*:**/Mapper/*.xml
   #javabean所在的基础包(可以是父级包名)
-  typeAliasesPackage: com.dnt.cloud.common.framework.pojo.domain.usercenter
+  type-aliases-package: com.dnt.cloud.common.pojo
   #mybatis的配置
   configuration:
-     #数据库中null值也调用setter方法
-     callSettersOnNulls: true
-     #驼峰命名与下划线相互转换
-     map-underscore-to-camel-case: true
+    #数据库中null值也调用setter方法
+    call-setters-on-nulls: true
+    #驼峰命名与下划线相互转换
+    map-underscore-to-camel-case: true
 
-my-props: 
-  appName: user-center-dev-002
-  appStauts: up
+#自定义参数配置
+custom:
+  config:
+    druid:
+      servlet:
+        ip-white-allow-list: 127.0.0.1
+        ip-black-deny-list: 192.168.110.111
+        reset-enable: false
+        login-user-name: admin
+        login-pass-word: admin_druid
 
