@@ -16,7 +16,7 @@ spring:
       time-between-eviction-runs-millis: 60000
       #配置单个连接最小存活时间,单位毫秒
       min-evictable-idle-time-millis: 300000
-      validation-query: SELECT 1 FROM DUAL
+      validation-query: SELECT 1
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
