@@ -54,10 +54,15 @@ mybatis:
 custom:
   config:
     druid:
-      servlet:
-        ip-white-allow-list: 127.0.0.1
-        ip-black-deny-list: 192.168.110.111
-        reset-enable: false
-        login-user-name: admin
-        login-pass-word: admin_druid
+      monitor:
+        servlet-ip-white-allow: 127.0.0.1
+        servlet-ip-black-deny: 192.168.110.111
+        servlet-login-user-name: admin
+        servlet-login-pass-word: admin_druid
+        servlet-reset-enable: false
+        filter-path-exclusions: *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*
+
+
+
+
 
