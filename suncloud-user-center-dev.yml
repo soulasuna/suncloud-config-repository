@@ -53,6 +53,7 @@ mybatis:
 #自定义参数配置
 custom:
   config:
+    #druid数据源配置
     druid:
       monitor:
         servletIpWhiteAllow: 127.0.0.1
@@ -61,15 +62,14 @@ custom:
         servletLoginPassWord: admin_druid
         servletResetEnable: false
         filterPathExclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
-
-        # servlet-ip-white-allow: 127.0.0.1
-        # servlet-ip-black-deny: 192.168.110.111
-        # servlet-login-user-name: admin
-        # servlet-login-pass-word: admin_druid
-        # servlet-reset-enable: false
-        # filter-path-exclusions: *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*
-
-
-
-
-
+    #api文档swagger-ui配置
+    api:
+      swagger:
+        enable: true
+        apiInfoTitle: "SpringBoot基于Swagger2构建RESTful-API"
+        apiInfoDescription: "用户中心模块"
+        apiInfoVersion: "V1.0.0"
+        apiInfoContactName: "soulasuna"
+        apiInfoContactUrl: "https://github.com/soulasuna/cloud-geenwich-general/tree/master/suncloud-user-center"
+        apiInfoContactEmail: "jacky7boy@163.com"
+        scanBasePackage: "com.dnt.cloud.user.center.controller"
