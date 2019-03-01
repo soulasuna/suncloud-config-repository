@@ -68,7 +68,7 @@ custom:
         enable: true
         apiInfoTitle: "SpringBoot基于Swagger2构建RESTful-API"
         apiInfoDescription: "用户中心模块"
-        apiInfoVersion: "V2.0.0"
+        apiInfoVersion: "V1.0.0"
         apiInfoContactName: "soulasuna"
         apiInfoContactUrl: "https://github.com/soulasuna/cloud-geenwich-general/tree/master/suncloud-user-center"
         apiInfoContactEmail: "jacky7boy@163.com"
