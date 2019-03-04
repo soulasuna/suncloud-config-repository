@@ -1,12 +1,11 @@
 spring:
-  # application:
-  #   name: suncloud-merchant
+  profiles:
+    active: dev
   datasource:
-    name: druidDataSource
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.110.110:3306/cloud_user_center?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      url: jdbc:mysql://192.168.110.110:3306/cloud_merchant?useUnicode=true&characterEncoding=utf-8&useSSL=false
       username: root
       password: root_mysql
       #连接池初始化,最小,最大
@@ -19,32 +18,60 @@ spring:
       time-between-eviction-runs-millis: 60000
       #配置单个连接最小存活时间,单位毫秒
       min-evictable-idle-time-millis: 300000
-      validation-query: SELECT 1 FROM DUAL
+      validation-query: SELECT 1
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
       #druid连接池开启慢sql监控
       filters: stat,wall,slf4j,config
-      filter:
-        stat:
-          merge-sql: true
-          slow-sql-millis: 5000
-  #rabbitMQ配置
-  # rabbitmq:
-  #   host: 192.168.110.110
-  #   port: 5672
-  #   username: soulasuna
-  #   password: root_rabbitmq
-
+      connect-properties:
+        druid:
+          stat:
+            mergeSql: true
+            slowSqlMillis: 5000
+      # filter:
+      #   stat:
+      #     merge-sql: true
+      #     slow-sql-millis: 5000
+  #消息队列
+  rabbitmq:
+    host: 192.168.110.110
+    port: 5672
+    username: soulasuna
+    password: root_rabbitmq    
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
-  mapperLocations: classpath*:**/Mapper/*.xml
+  mapper-locations: classpath*:**/Mapper/*.xml
   #javabean所在的基础包(可以是父级包名)
-  typeAliasesPackage: com.dnt.cloud.common.pojo
+  type-aliases-package: com.dnt.cloud.common.pojo.domain.merchant
   #mybatis的配置
   configuration:
-     #数据库中null值也调用setter方法
-     callSettersOnNulls: true
-     #驼峰命名与下划线相互转换
-     map-underscore-to-camel-case: true
+    #数据库中null值也调用setter方法
+    call-setters-on-nulls: true
+    #驼峰命名与下划线相互转换
+    map-underscore-to-camel-case: true
+
+#自定义参数配置
+custom:
+  config:
+    #druid数据源配置
+    druid:
+      monitor:
+        servletIpWhiteAllow: 127.0.0.1
+        servletIpBlackDeny: 192.168.110.111
+        servletLoginUserName: admin
+        servletLoginPassWord: admin_druid
+        servletResetEnable: false
+        filterPathExclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+    #api文档swagger-ui配置
+    api:
+      swagger:
+        enable: true
+        apiInfoTitle: "SpringBoot基于Swagger2构建RESTful-API"
+        apiInfoDescription: "商户中心模块"
+        apiInfoVersion: "V1.0.0"
+        apiInfoContactName: "soulasuna"
+        apiInfoContactUrl: "https://github.com/soulasuna/cloud-geenwich-general/tree/master/suncloud-merchant"
+        apiInfoContactEmail: "jacky7boy@163.com"
+        scanBasePackage: "com.dnt.cloud.merchant.controller"
