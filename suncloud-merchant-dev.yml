@@ -29,16 +29,35 @@ spring:
           stat:
             mergeSql: true
             slowSqlMillis: 5000
-      # filter:
-      #   stat:
-      #     merge-sql: true
-      #     slow-sql-millis: 5000
+
   #消息队列
   rabbitmq:
     host: 192.168.110.110
     port: 5672
     username: soulasuna
-    password: root_rabbitmq    
+    password: root_rabbitmq
+
+  #redis配置信息
+  redis:
+    host: 192.168.110.110
+    port: 6379
+    # Redis数据库索引（默认为0）
+    database: 0
+    password: root_redis
+    # 连接超时时间（毫秒
+    timeout: 1000ms
+    lettuce:
+      shutdown-timeout: 100ms
+      pool:
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: 10000ms
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 200
+        # 连接池中的最小空闲连接
+        min-idle: 0
+
 #springboot整合mybatis配置
 mybatis:
   #mapper文件加载路径
