@@ -95,3 +95,12 @@ custom:
         apiInfoContactUrl: "https://github.com/soulasuna/cloud-geenwich-general/tree/master/suncloud-merchant"
         apiInfoContactEmail: "jacky7boy@163.com"
         scanBasePackage: "com.dnt.cloud.merchant.controller"
+  factory:
+    models:
+      #redis_lock
+      - id: redisLock
+        path: com.dnt.cloud.merchant.lock.RedisLock
+      #user_info
+      - id: userInfo
+        path: com.dnt.cloud.common.framework.pojo.domain.usercenter.UserInfo
+
