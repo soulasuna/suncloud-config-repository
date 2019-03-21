@@ -99,7 +99,7 @@ custom:
     models:
       #redis_lock
       - id: redisLock
-        path: com.dnt.cloud.merchant.lock.RedisLock
+        path: com.dnt.cloud.common.framework.lock.redis.RedisLock
       #user_info
       - id: userInfo
         path: com.dnt.cloud.common.framework.pojo.domain.usercenter.UserInfo
