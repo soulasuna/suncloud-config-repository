@@ -36,14 +36,7 @@ spring:
     port: 5672
     username: soulasuna
     password: root_rabbitmq
-    virtual-host: /
-    publisher-confirms: true
-    publisher-returns: true
-    listener:
-      direct:
-        acknowledge-mode: manual
-      simple:
-        acknowledge-mode: manual
+    virtual-host: /global
 
   #redis配置信息
   redis:
@@ -92,6 +85,7 @@ custom:
         servletLoginPassWord: admin_druid
         servletResetEnable: false
         filterPathExclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+
     #api文档swagger-ui配置
     api:
       swagger:
@@ -103,12 +97,10 @@ custom:
         apiInfoContactUrl: "https://github.com/soulasuna/cloud-geenwich-general/tree/master/suncloud-merchant"
         apiInfoContactEmail: "jacky7boy@163.com"
         scanBasePackage: "com.dnt.cloud.merchant.controller"
+        
+  #工厂加载类配置     
   factory:
     models:
       #redis_lock
       - id: redisLock
         path: com.dnt.cloud.common.framework.lock.redis.RedisLock
-      #user_info
-      - id: userInfo
-        path: com.dnt.cloud.common.framework.pojo.domain.usercenter.UserInfo
-
