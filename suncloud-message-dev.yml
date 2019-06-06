@@ -98,11 +98,11 @@ custom:
     #线程池配置
     pool:
       #消息生产者线程池参数配置
-      producerTaskExecutor:
+      producer-task-executor:
         corePoolSize: 16
         maxPoolSize: 64
         queueCapacity: 100
-        threadNamePrefix: rabbit
+        threadNamePrefix: rabbit-producer-executor
         keepAliveSeconds: 60
 
   factory:
