@@ -110,6 +110,3 @@ custom:
       #redis_lock
       - id: redisLock
         path: com.dnt.cloud.common.framework.lock.redis.RedisLock
-      #rabbit
-      - id: producerRabbitTemplate
-        path: org.springframework.amqp.rabbit.core.RabbitTemplate
