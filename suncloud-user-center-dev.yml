@@ -36,6 +36,7 @@ spring:
     port: 5672
     username: soulasuna
     password: root_rabbitmq
+    virtual-host: /global
 
   #redis配置信息
   redis:
@@ -95,3 +96,10 @@ custom:
         apiInfoContactUrl: "https://github.com/soulasuna/cloud-geenwich-general/tree/master/suncloud-user-center"
         apiInfoContactEmail: "jacky7boy@163.com"
         scanBasePackage: "com.dnt.cloud.user.center.controller"
+
+  #工厂加载类配置     
+  factory:
+    models:
+      #redis_lock
+      - id: redisLock
+        path: com.dnt.cloud.common.framework.lock.redis.RedisLock
