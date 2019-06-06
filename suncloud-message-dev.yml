@@ -65,7 +65,7 @@ mybatis:
   #mapper文件加载路径
   mapper-locations: classpath*:**/Mapper/*.xml
   #javabean所在的基础包(可以是父级包名)
-  type-aliases-package: com.dnt.cloud.common.pojo.domain.message
+  type-aliases-package: com.dnt.cloud.message.pojo.po
   #mybatis的配置
   configuration:
     #数据库中null值也调用setter方法
