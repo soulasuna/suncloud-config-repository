@@ -36,7 +36,6 @@ spring:
     port: 5672
     username: soulasuna
     password: root_rabbitmq
-    virtual-host: /global
 
   #redis配置信息
   redis:
