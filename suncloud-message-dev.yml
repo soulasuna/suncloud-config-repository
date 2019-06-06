@@ -102,7 +102,7 @@ custom:
         corePoolSize: 16
         maxPoolSize: 64
         queueCapacity: 100
-        threadNamePrefix: rabbit-producer-executor
+        threadNamePrefix: rabbitProducerExecutor
         keepAliveSeconds: 60
 
   factory:
