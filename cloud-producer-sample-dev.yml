@@ -38,4 +38,4 @@ mybatis:
     call-setters-on-nulls: true
     map-underscore-to-camel-case: true
 
-environment:dev
+environment: dev
