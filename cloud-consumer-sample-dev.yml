@@ -1,0 +1,41 @@
+server:
+  port: 8095
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://admin:admin@localhost:18761/eureka/
+    healthcheck:
+      enabled: true
+
+spring:
+  application:
+    name: cloud-consumer-sample
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.49.188:3306/cloud_consumer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      pool-name: MyHikariCP
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  kafka:
+    bootstrap-servers: http://192.168.49.188:9092,http://192.168.49.188:9093,http://192.168.49.188:9094
+
+mybatis:
+  mapper-locations: classpath*:**/Mapper/*.xml
+  type-aliases-package: com.dnt.cloud.consumer.sample.pojo.po
+  configuration:
+    call-setters-on-nulls: true
+    map-underscore-to-camel-case: true
+
+environment: test
