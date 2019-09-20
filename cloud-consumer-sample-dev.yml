@@ -1,6 +1,5 @@
 server:
   port: 8095
-  port: 8090
   tomcat:
     max-threads: 150
     accept-count: 1000
@@ -42,5 +41,3 @@ mybatis:
   configuration:
     call-setters-on-nulls: true
     map-underscore-to-camel-case: true
-
-environment: test
