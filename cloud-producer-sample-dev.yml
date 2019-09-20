@@ -1,9 +1,13 @@
 server:
   port: 8090
+  tomcat:
+    max-threads: 150
+    accept-count: 1000
+    max-connections: 1000
 
 eureka:
   instance:
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    instance-id: ${spring.application.name}[${spring.cloud.client.ip-address}:${server.port}]
     prefer-ip-address: true
   client:
     service-url:
