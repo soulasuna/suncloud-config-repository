@@ -55,6 +55,10 @@ feign:
         readTimeout: 1000
         loggerLevel: full
 
+ribbon:
+  eager-load:
+    enabled: false
+
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
   type-aliases-package: com.dnt.cloud.consumer.sample.pojo.po
