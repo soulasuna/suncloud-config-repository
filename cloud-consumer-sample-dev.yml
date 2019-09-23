@@ -51,7 +51,7 @@ feign:
       default:
         connectTimeout: 1000
         readTimeout: 1000
-        loggerLevel: full
+        loggerLevel: FULL
 
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
