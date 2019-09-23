@@ -36,6 +36,8 @@ spring:
     bootstrap-servers: http://192.168.49.188:9092,http://192.168.49.188:9093,http://192.168.49.188:9094
 
 feign:
+  httpclient:
+    enabled: false
   okhttp:
     enabled: true
   hystrix:
