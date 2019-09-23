@@ -57,7 +57,7 @@ feign:
 
 ribbon:
   eager-load:
-    enabled: false
+    clients: com.dnt.cloud.producer.api.feign.ConsumerFeignClient
 
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
