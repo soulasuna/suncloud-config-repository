@@ -48,12 +48,7 @@ feign:
       min-request-size: 2048
     response:
       enabled: true
-  client:
-    config:
-      default:
-        connectTimeout: 3000
-        readTimeout: 3000
-        loggerLevel: full
+      
 
 ribbon:
   eager-load:
