@@ -59,3 +59,7 @@ mybatis:
   configuration:
     call-setters-on-nulls: true
     map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.dnt.cloud.producer.api.feign.ConsumerFeignClient: DEBUG
