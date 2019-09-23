@@ -41,5 +41,4 @@ mybatis:
   configuration:
     call-setters-on-nulls: true
     map-underscore-to-camel-case: true
-
-environment: test
+    
