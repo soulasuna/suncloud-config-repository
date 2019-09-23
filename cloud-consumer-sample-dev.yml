@@ -57,6 +57,7 @@ feign:
 
 ribbon:
   eager-load:
+    enabled: true
     clients: com.dnt.cloud.producer.api.feign.ConsumerFeignClient
 
 mybatis:
