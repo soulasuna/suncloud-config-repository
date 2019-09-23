@@ -35,6 +35,24 @@ spring:
   kafka:
     bootstrap-servers: http://192.168.49.188:9092,http://192.168.49.188:9093,http://192.168.49.188:9094
 
+feign:
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+      min-request-size: 2048
+    response:
+      enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 1000
+        readTimeout: 1000
+        loggerLevel: full
+
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
   type-aliases-package: com.dnt.cloud.consumer.sample.pojo.po
