@@ -50,7 +50,7 @@ feign:
       enabled: true
   client:
     config:
-      default:
+      com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient:
         connectTimeout: 5000
         readTimeout: 5000
         loggerLevel: full
@@ -58,7 +58,7 @@ feign:
 ribbon:
   eager-load:
     enabled: true
-    clients: com.dnt.cloud.producer.api.feign.ConsumerFeignClient
+    clients: com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient
 
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
@@ -69,4 +69,4 @@ mybatis:
 
 logging:
   level:
-    com.dnt.cloud.producer.api.feign.ConsumerFeignClient: DEBUG
+    com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient: DEBUG
