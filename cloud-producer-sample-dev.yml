@@ -21,7 +21,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.49.188:3306/cloud_producer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Hongkong
+    url: jdbc:mysql://192.168.191.188:3306/cloud_producer?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Hongkong
     username: root
     password: 123456
     hikari:
@@ -33,7 +33,7 @@ spring:
       connection-timeout: 30000
       connection-test-query: SELECT 1
   kafka:
-    bootstrap-servers: http://192.168.49.188:9092,http://192.168.49.188:9093,http://192.168.49.188:9094
+    bootstrap-servers: http://192.168.191.188:9092,http://192.168.191.188:9093,http://192.168.191.188:9094
 
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
