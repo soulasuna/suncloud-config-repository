@@ -51,8 +51,8 @@ feign:
   client:
     config:
       default:
-#        connectTimeout: 3000
-#        readTimeout: 3000
+        connectTimeout: 3000
+        readTimeout: 3000
         loggerLevel: full
         
 ribbon:
@@ -66,7 +66,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 3000
+            timeout-in-milliseconds: 3000
 
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
