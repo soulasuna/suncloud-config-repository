@@ -48,7 +48,11 @@ feign:
       min-request-size: 2048
     response:
       enabled: true
-
+  client:
+    config:
+      default:
+        loggerLevel: full
+        
 ribbon:
   eager-load:
     enabled: true
@@ -60,7 +64,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeout-in-milliseconds: 2000
+            timeout-in-milliseconds: 3000
 
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
