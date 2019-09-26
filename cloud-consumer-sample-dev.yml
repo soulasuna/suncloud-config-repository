@@ -48,10 +48,14 @@ feign:
       min-request-size: 2048
     response:
       enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
 
 ribbon:
-  ReadTimeout: 3000
-  ConnectTimeout: 3000
   eager-load:
     enabled: true
     clients: com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient
