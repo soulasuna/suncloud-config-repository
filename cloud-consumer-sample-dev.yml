@@ -60,6 +60,14 @@ ribbon:
     enabled: true
     clients: com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
 mybatis:
   mapper-locations: classpath*:**/Mapper/*.xml
   type-aliases-package: com.dnt.cloud.consumer.sample.pojo.po
