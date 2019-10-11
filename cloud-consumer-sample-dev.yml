@@ -58,7 +58,7 @@ feign:
 ribbon:
   eager-load:
     enabled: true
-    clients: com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient
+    clients: com.dnt.cloud.producer.sample.feign.ProductFeignClient
 
 hystrix:
   command:
@@ -77,4 +77,4 @@ mybatis:
 
 logging:
   level:
-    com.dnt.cloud.consumer.sample.feign.ConsumerFeignClient: DEBUG
+    com.dnt.cloud.producer.sample.feign.ProductFeignClient: DEBUG
